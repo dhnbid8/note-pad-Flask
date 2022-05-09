@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card text-white bg-info mb-3" style="width: 1000px;margin: 150px;">
+    <div class="card-header"></div>
+    <div class="card-body">
+      <h4 class="card-title">{{note.title}}</h4>
+      <p class="card-text">{{note.body|safe}}</p>
+      <a href="/delete/{{note.id}}"><button type="button" class="btn btn-outline-danger">Delete</button></a><a href="/edit/{{note.id}}"><button type="button" class="btn btn-outline-success">Edit</button></a>
+
+    </div>
+  </div>
+
+{% endblock %}

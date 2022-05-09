@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div style="justify-content: center; display: flex; flex-wrap: wrap;">
+    {% for note in notes %}
+    
+    <a class="navbar-brand" style="color: #fff;" href="/block/{{note.id}}">
+    <div class="card text-white bg-info mb-3" style="width: 28%; ">
+        <div class="card-body">
+            <h4 class="card-title">{{note.title}}</h4>
+            <p class="card-text">{{note.body[:40]|safe}} ...</p>   
+    <br>
+            <a href="/delete/{{note.id}}"><button type="button" class="btn btn-outline-danger">Delete</button></a><a href="/edit/{{note.id}}"><button type="button" class="btn btn-outline-success">Edit</button></a>
+        </div>
+    </div>
+</a>
+    {% endfor %}
+</div>
+    
+{% endblock %}

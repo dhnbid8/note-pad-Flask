@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card text-white bg-info mb-3" style="width: 1000px;margin: 150px;">
+    
+    <form action="/add-note" method="POST">
+        <label for="title" class="form-label mt-4">enter your title : </label>
+        <input type="text" class="form-control" name="title" id="title">
+        <label for="title" class="form-label mt-4">enter your body : </label>
+        <textarea name="editor1" ></textarea>
+        <br>
+        <input type="submit" style="margin-left: 920px;" class="btn btn-warning" value="add">
+    </form>
+
+  </div>
+    
+        <script>
+                CKEDITOR.replace( 'editor1' );
+        </script>
+{% endblock %}
