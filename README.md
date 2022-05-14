@@ -7,6 +7,8 @@ install and run :
 <br>
 `cd note-pad-Flask`
 <br>
+`pip install requirements.txt`
+<br>
 `python app.py`
 <br>
 OR
